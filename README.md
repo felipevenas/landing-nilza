@@ -87,8 +87,8 @@ landing-nilza-raul/
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/felipevenas/landing-nilza-raul.git
-cd landing-nilza-raul
+git clone https://github.com/felipevenas/landing-nilza.git
+cd landing-nilza
 
 # 2. Instalar as dependências do projeto
 npm install
