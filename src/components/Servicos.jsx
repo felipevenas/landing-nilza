@@ -144,7 +144,7 @@ export default function Servicos() {
               margin: 0,
             }}
           >
-            Do primeiro contato à chave na mão.
+            Do primeiro contato à entrega das chaves.
           </p>
           
           {/* Linha decorativa dourada */}

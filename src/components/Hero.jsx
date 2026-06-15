@@ -264,7 +264,7 @@ export default function Hero() {
             margin: '0 auto',
           }}
         >
-          Seu próximo lar começa com quem realmente entende o mercado.
+          Seu próximo lar ou investimento começa com quem realmente entende o mercado.
         </h1>
 
         {/* Subtitle */}
