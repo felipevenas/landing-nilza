@@ -71,7 +71,7 @@ export default function FloatingWhatsApp() {
 
       {/* Botão Flutuante */}
       <a
-        href="https://wa.me/5571993805616"
+        href="https://wa.me/5571982613371"
         target="_blank"
         rel="noopener noreferrer"
         className="floating-whatsapp-btn clickable"
@@ -106,24 +106,27 @@ export default function FloatingWhatsApp() {
       {/* CSS animado para pulso do box-shadow */}
       <style>{`
         .floating-whatsapp-btn {
-          animation: floatingWapPulseEffect 2s infinite;
+          animation: floatingWapPulseEffect 2s infinite ease-in-out;
         }
 
         @keyframes floatingWapPulseEffect {
           0% {
+            transform: scale(1);
             box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
           }
-          70% {
-            box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+          50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
           }
           100% {
+            transform: scale(1);
             box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
           }
         }
 
         @media (hover: hover) and (pointer: fine) {
           .floating-whatsapp-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) !important;
             background-color: #20ba5a;
           }
         }

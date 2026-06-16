@@ -204,7 +204,7 @@ export default function QuemSomos() {
                 marginTop: '12px',
               }}
             >
-              Nilza e Vera são corretoras de imóveis com atuação em Salvador e região, especializadas em conectar pessoas aos imóveis que realmente combinam com seu estilo de vida e objetivos. Com atendimento humanizado e total transparência, guiam cada cliente do primeiro contato até a assinatura do contrato.
+              Nilza e Vera Neves são corretoras de imóveis com atuação em Salvador e região, especializadas em conectar pessoas aos imóveis que realmente combinam com seu estilo de vida e objetivos. Com atendimento humanizado e total transparência, guiam cada cliente do primeiro contato até a assinatura do contrato.
             </p>
 
             {/* Badges */}
@@ -334,7 +334,7 @@ export default function QuemSomos() {
                     margin: 0,
                   }}
                 >
-                  Nilza Raul & Vera
+                  Nilza Raul & Vera Neves
                 </h3>
                 
                 <p
