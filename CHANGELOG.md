@@ -2,7 +2,16 @@
 
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
-## [Não lançado] - 15-06-2026
+## [Não lançado] - 16-06-2026
+
+### Alterações
+
+#### 🔧 Modificado
+- **Sobrenome de Vera**: Atualizado o nome da corretora para "Vera Neves" em todo o site (incluindo SEO, sobre nós, depoimentos, rodapé, contatos e README) para refletir o sobrenome oficial.
+- **Link de Contato (WhatsApp)**: Atualizado o número de telefone de contato de `5571993805616` para `5571982613371` no [FloatingWhatsApp.jsx](file:///c:/Codes/landing-nilza-raul/src/components/FloatingWhatsApp.jsx) e [Contato.jsx](file:///c:/Codes/landing-nilza-raul/src/components/Contato.jsx).
+- **Botão Flutuante do WhatsApp**: Refinada a animação de pulso e o efeito hover do botão flutuante.
+
+## [0.1.0] - 15-06-2026
 
 ### Alterações
 

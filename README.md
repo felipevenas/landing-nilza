@@ -1,6 +1,6 @@
 # 🏡 N&V Imóveis | Landing Page Premium
 
-> Landing page institucional premium, sofisticada e responsiva para as corretoras de imóveis Nilza e Vera (N&V Imóveis) em Salvador/BA.
+> Landing page institucional premium, sofisticada e responsiva para as corretoras de imóveis Nilza e Vera Neves (N&V Imóveis) em Salvador/BA.
 
 ![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&logoColor=white)
@@ -12,7 +12,7 @@
 
 ## 📖 Propósito
 
-Apresentar o trabalho de excelência das corretoras Nilza e Vera com foco no mercado imobiliário de Salvador, BA. O projeto utiliza design minimalista de alto impacto visual (dark mode, detalhes em dourado e tipografia elegante) com animações dinâmicas e fluidas para oferecer uma experiência de usuário excepcional e conversões otimizadas.
+Apresentar o trabalho de excelência das corretoras Nilza e Vera Neves com foco no mercado imobiliário de Salvador, BA. O projeto utiliza design minimalista de alto impacto visual (dark mode, detalhes em dourado e tipografia elegante) com animações dinâmicas e fluidas para oferecer uma experiência de usuário excepcional e conversões otimizadas.
 
 ## 🌟 Funcionalidades
 
@@ -42,7 +42,7 @@ landing-nilza-raul/
 │   │   ├── Hero.jsx              # Seção inicial de impacto com partículas e split text
 │   │   ├── Navbar.jsx            # Menu superior com hambúrguer animado
 │   │   ├── PorQueEscolher.jsx    # Diferenciais da marca N&V
-│   │   ├── QuemSomos.jsx         # História das corretoras Nilza e Vera
+│   │   ├── QuemSomos.jsx         # História das corretoras Nilza e Vera Neves
 │   │   └── Servicos.jsx          # Grid de serviços prestados
 │   ├── App.jsx                   # Componente base que gerencia o Lenis Scroll global
 │   ├── index.css                 # Design System (tokens, variáveis, botões e reset)

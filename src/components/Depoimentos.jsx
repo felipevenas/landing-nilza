@@ -74,7 +74,7 @@ export default function Depoimentos() {
 
   const depoimentos = [
     {
-      text: "Nilza e Vera foram incríveis! Me ajudaram a encontrar exatamente o que eu precisava em tempo recorde. Profissionalismo e atenção do início ao fim.",
+      text: "Nilza e Vera Neves foram incríveis! Me ajudaram a encontrar exatamente o que eu precisava em tempo recorde. Profissionalismo e atenção do início ao fim.",
       author: "Mariana S.",
       location: "Salvador",
     },

@@ -126,7 +126,7 @@ export default function Footer() {
           }}
         >
           <span>
-            &copy; {currentYear} N&V Imóveis &mdash; Nilza Raul &amp; Vera. Todos os direitos reservados.
+            &copy; {currentYear} N&V Imóveis &mdash; Nilza Raul &amp; Vera Neves. Todos os direitos reservados.
           </span>
           <span style={{ letterSpacing: '0.05em' }}>
             CRECI-BA 12345 &bull; CRECI-BA 67890

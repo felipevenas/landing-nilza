@@ -281,7 +281,7 @@ export default function Hero() {
             opacity: 0,
           }}
         >
-          Nilza e Vera unem experiência, dedicação e expertise local para transformar a sua busca pelo imóvel ideal em uma jornada segura e tranquila.
+          Nilza e Vera Neves unem experiência, dedicação e expertise local para transformar a sua busca pelo imóvel ideal em uma jornada segura e tranquila.
         </p>
 
         {/* Botões */}

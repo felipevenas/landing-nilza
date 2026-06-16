@@ -155,7 +155,7 @@ export default function Contato() {
               margin: 0,
             }}
           >
-            Entre em contato agora e descubra como Nilza e Vera podem transformar essa jornada para você.
+            Entre em contato agora e descubra como Nilza e Vera Neves podem transformar essa jornada para você.
           </p>
 
           {/* Botão de WhatsApp Pulsante */}
@@ -164,7 +164,7 @@ export default function Contato() {
             <div className="whatsapp-btn-ripple" />
             
             <a
-              href="https://wa.me/5571993805616"
+              href="https://wa.me/5571982613371"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-pill whatsapp-pulse-btn clickable"
