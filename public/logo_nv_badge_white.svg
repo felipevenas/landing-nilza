@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&amp;family=Playfair+Display:wght@900&amp;display=swap');
+      .badge-center {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        font-size: 190px;
+        fill: #FFFFFF;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .badge-text {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        fill: #FFFFFF;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+    </style>
+    <!-- Curvas para o texto circular -->
+    <path id="top-curve" d="M 150 400 A 250 250 0 0 1 650 400" fill="none" />
+    <path id="bottom-curve" d="M 150 400 A 250 250 0 0 0 650 400" fill="none" />
+  </defs>
+
+  <!-- Iniciais no centro -->
+  <text x="400" y="390" class="badge-center">N&amp;V</text>
+
+  <!-- Círculos de borda -->
+  <circle cx="400" cy="400" r="210" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <circle cx="400" cy="400" r="310" stroke="#FFFFFF" stroke-width="4" fill="none" />
+  <circle cx="400" cy="400" r="300" stroke="#FFFFFF" stroke-dasharray="6 6" stroke-width="1.5" fill="none" opacity="0.6" />
+
+  <!-- Estrelas separadoras -->
+  <!-- Estrela Esquerda -->
+  <g fill="#FFFFFF" transform="translate(138, 390) scale(0.8)">
+    <polygon points="10,0 13,6 20,7 15,12 16,19 10,15 4,19 5,12 0,7 7,6" />
+  </g>
+  <!-- Estrela Direita -->
+  <g fill="#FFFFFF" transform="translate(642, 390) scale(0.8)">
+    <polygon points="10,0 13,6 20,7 15,12 16,19 10,15 4,19 5,12 0,7 7,6" />
+  </g>
+
+  <!-- Texto Curvo -->
+  <text class="badge-text">
+    <textPath href="#top-curve" startOffset="50%" text-anchor="middle">
+      Nilza Raul &amp; Vera Neves
+    </textPath>
+  </text>
+  
+  <text class="badge-text">
+    <textPath href="#bottom-curve" startOffset="50%" text-anchor="middle">
+      Salvador, BA
+    </textPath>
+  </text>
+</svg>
