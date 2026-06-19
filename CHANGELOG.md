@@ -2,6 +2,16 @@
 
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
+## [Não lançado] - 18-06-2026
+
+### Alterações
+
+#### 🚀 Adicionado
+- **Logotipos e Imagens Oficiais**: Adicionados novos logotipos e badges em formatos SVG e PNG à pasta `public/` para uso na identidade visual do site.
+
+#### 🔧 Modificado
+- **Favicon**: Atualizado o favicon do site para utilizar o novo logotipo dourado (`logo_nv_badge_gold.svg`), proporcionando uma identidade visual mais premium e elegante.
+
 ## [Não lançado] - 16-06-2026
 
 ### Alterações
