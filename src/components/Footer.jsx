@@ -129,7 +129,7 @@ export default function Footer() {
             &copy; {currentYear} N&V Imóveis &mdash; Nilza Raul &amp; Vera Neves. Todos os direitos reservados.
           </span>
           <span style={{ letterSpacing: '0.05em' }}>
-            CRECI-BA 12345 &bull; CRECI-BA 67890
+            CRECI-BA 20284 &bull; CRECI-BA 24058
           </span>
         </div>
       </div>

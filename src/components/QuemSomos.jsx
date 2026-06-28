@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
+import sociasImg from '../assets/socias.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,10 +13,7 @@ export default function QuemSomos() {
   const bodyRef = useRef(null);
   const badgesRef = useRef(null);
   const cardRef = useRef(null);
-  const lineRef = useRef(null);
-  const letterNRef = useRef(null);
-  const letterVRef = useRef(null);
-  const cardTextRef = useRef(null);
+  const creciBlockRef = useRef(null);
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -55,7 +53,7 @@ export default function QuemSomos() {
       );
     }
 
-    // 2. Animação de fade-in + slide-up do Eyebrow, Corpo e Badges
+    // 2. Animação de fade-in + slide-up do Eyebrow, Corpo, Creci e Badges
     gsap.fromTo(eyebrowRef.current,
       { opacity: 0, y: 20 },
       {
@@ -85,6 +83,21 @@ export default function QuemSomos() {
       }
     );
 
+    gsap.fromTo(creciBlockRef.current,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: creciBlockRef.current,
+          start: 'top 85%',
+        }
+      }
+    );
+
     gsap.fromTo(badgesRef.current,
       { opacity: 0, y: 20 },
       {
@@ -100,7 +113,7 @@ export default function QuemSomos() {
       }
     );
 
-    // 3. Animação do Card N|V
+    // 3. Animação do Container da Foto
     const cardTl = gsap.timeline({
       scrollTrigger: {
         trigger: cardRef.current,
@@ -108,38 +121,10 @@ export default function QuemSomos() {
       }
     });
 
-    // Fade-in e scale do card em si
+    // Fade-in e scale do container da foto em si
     cardTl.fromTo(cardRef.current,
       { opacity: 0, scale: 0.95 },
       { opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out' }
-    );
-
-    // Entrada da letra N (fade + slide-right)
-    cardTl.fromTo(letterNRef.current,
-      { opacity: 0, x: -30 },
-      { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out' },
-      '-=0.4'
-    );
-
-    // Crescimento da linha vertical (0 -> 100% height)
-    cardTl.fromTo(lineRef.current,
-      { scaleY: 0 },
-      { scaleY: 1, duration: 0.6, ease: 'power2.out' },
-      '-=0.4'
-    );
-
-    // Entrada da letra V (fade + slide-left)
-    cardTl.fromTo(letterVRef.current,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out' },
-      '-=0.6'
-    );
-
-    // Texto abaixo no card
-    cardTl.fromTo(cardTextRef.current?.children,
-      { opacity: 0, y: 15 },
-      { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out' },
-      '-=0.2'
     );
 
     return () => {
@@ -204,8 +189,30 @@ export default function QuemSomos() {
                 marginTop: '12px',
               }}
             >
-              Nilza e Vera Neves são corretoras de imóveis com atuação em Salvador e região, especializadas em conectar pessoas aos imóveis que realmente combinam com seu estilo de vida e objetivos. Com atendimento humanizado e total transparência, guiam cada cliente do primeiro contato até a assinatura do contrato.
+              Nilza Raul e Vera Neves são corretoras de imóveis com atuação em Salvador e região, especializadas em conectar pessoas aos imóveis que realmente combinam com seu estilo de vida e objetivos. Com atendimento humanizado e total transparência, guiam cada cliente do primeiro contato até a assinatura do contrato.
             </p>
+
+            {/* Bloco de Assinaturas/CRECI */}
+            <div
+              ref={creciBlockRef}
+              style={{
+                display: 'grid',
+                gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+                gap: isMobile ? '16px' : '24px',
+                marginTop: '12px',
+                paddingTop: '20px',
+                borderTop: '1px solid rgba(201, 168, 76, 0.15)',
+              }}
+            >
+              <div>
+                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 600, color: '#1A1A2E', margin: 0 }}>Nilza Raul</h4>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: '#C9A84C', margin: '4px 0 0 0', fontWeight: 500 }}>Corretora de Imóveis · CRECI BA 20284</p>
+              </div>
+              <div>
+                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 600, color: '#1A1A2E', margin: 0 }}>Vera Neves</h4>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: '#C9A84C', margin: '4px 0 0 0', fontWeight: 500 }}>Corretora de Imóveis · CRECI BA 24058</p>
+              </div>
+            </div>
 
             {/* Badges */}
             <div
@@ -213,7 +220,7 @@ export default function QuemSomos() {
               style={{
                 display: 'flex',
                 gap: '12px',
-                marginTop: '16px',
+                marginTop: '12px',
                 flexWrap: 'wrap',
               }}
             >
@@ -250,109 +257,56 @@ export default function QuemSomos() {
             </div>
           </div>
 
-          {/* Coluna Card N|V (Direita) */}
+          {/* Coluna Foto (Direita) */}
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
             <div
               ref={cardRef}
+              className="photo-container"
               style={{
                 width: '100%',
                 maxWidth: '400px',
-                backgroundColor: '#1A1A2E',
-                border: '1px solid rgba(201, 168, 76, 0.25)',
                 borderRadius: '16px',
-                padding: isMobile ? '36px' : '48px',
-                boxShadow: '0 12px 40px rgba(26, 26, 46, 0.15)',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textAlign: 'center',
-                willChange: 'transform, opacity',
+                overflow: 'hidden',
+                boxShadow: '0 20px 40px rgba(26, 26, 46, 0.15)',
+                border: '1px solid rgba(201, 168, 76, 0.25)',
+                position: 'relative',
+                aspectRatio: '3 / 4',
                 opacity: 0,
+                willChange: 'transform, opacity',
               }}
             >
-              {/* Monograma N | V */}
+              <img
+                src={sociasImg}
+                alt="Nilza Raul & Vera Neves - Sócias Fundadoras da N&V Imóveis"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  transition: 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)',
+                }}
+                className="photo-img"
+              />
+              {/* Overlay sofisticado no hover */}
               <div
                 style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '24px',
-                  marginBottom: '24px',
-                  height: '100px',
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(to top, rgba(26, 26, 46, 0.4) 0%, rgba(26, 26, 46, 0) 50%)',
+                  pointerEvents: 'none',
                 }}
-              >
-                <span
-                  ref={letterNRef}
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 900,
-                    fontSize: '60px',
-                    color: '#C9A84C',
-                    lineHeight: 1,
-                    userSelect: 'none',
-                  }}
-                >
-                  N
-                </span>
-                
-                {/* Linha divisória vertical */}
-                <div
-                  ref={lineRef}
-                  style={{
-                    width: '2px',
-                    height: '80px',
-                    backgroundColor: '#C9A84C',
-                    transformOrigin: 'top center',
-                    willChange: 'transform',
-                  }}
-                />
-
-                <span
-                  ref={letterVRef}
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 900,
-                    fontSize: '60px',
-                    color: '#C9A84C',
-                    lineHeight: 1,
-                    userSelect: 'none',
-                  }}
-                >
-                  V
-                </span>
-              </div>
-
-              {/* Informações da dupla */}
-              <div ref={cardTextRef} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontWeight: 300,
-                    fontSize: '16px',
-                    color: '#FFFFFF',
-                    letterSpacing: '0.08em',
-                    margin: 0,
-                  }}
-                >
-                  Nilza Raul & Vera Neves
-                </h3>
-                
-                <p
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontWeight: 400,
-                    fontSize: '12px',
-                    color: '#C9A84C',
-                    margin: 0,
-                  }}
-                >
-                  Especialistas em Imóveis · Salvador, BA
-                </p>
-              </div>
+              />
             </div>
           </div>
         </div>
       </div>
+      <style>{`
+        .photo-container {
+          cursor: pointer;
+        }
+        .photo-container:hover .photo-img {
+          transform: scale(1.04);
+        }
+      `}</style>
     </section>
   );
 }
