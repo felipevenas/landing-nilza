@@ -2,7 +2,19 @@
 
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
-## [Não lançado] - 18-06-2026
+## [0.1.3] - 28-06-2026
+
+### Alterações
+
+#### 🚀 Adicionado
+- **Foto das Sócias**: Inclusão da imagem profissional das sócias Nilza Raul e Vera Neves (`socias.jpg`) na pasta de assets.
+
+#### 🔧 Modificado
+- **Quem Somos (`QuemSomos.jsx`)**: Substituído o card antigo de monograma pela foto das sócias com container animado em GSAP e adicionadas as informações oficiais de CRECI (Nilza: 20284, Vera: 24058) de forma elegante na coluna de texto.
+- **Rodapé (`Footer.jsx`)**: Atualizados os números fictícios de CRECI-BA no rodapé para os CRECIs reais das corretoras.
+- **Favicon**: Alterado o favicon do site para utilizar o logotipo estático de iniciais (`logo_nv_static_gold.svg`), e otimizado o `viewBox` para que fique quadrado (`0 -300 1200 1200`), evitando cortes e tornando o ícone maior e mais legível na aba do navegador.
+
+## [0.1.2] - 18-06-2026
 
 ### Alterações
 
@@ -12,7 +24,7 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 #### 🔧 Modificado
 - **Favicon**: Atualizado o favicon do site para utilizar o novo logotipo dourado (`logo_nv_badge_gold.svg`), proporcionando uma identidade visual mais premium e elegante.
 
-## [Não lançado] - 16-06-2026
+## [0.1.1] - 16-06-2026
 
 ### Alterações
 
